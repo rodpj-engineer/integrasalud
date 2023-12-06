@@ -12,8 +12,8 @@ function calculate() {
 
     // Check if inputNumber exists in the table
     if (table[inputNumber]) {
-        resultElement.innerText = 'Hola ' + table[inputNumber] + ', tenemos las siguientes sugerencias para ti: \n XXXX  \n Agenda ahora aquí! ';
+        resultElement.innerText = 'Hola ' + table[inputNumber] + ', tenemos las siguientes sugerencias para ti: \n \n XXXX \n \n Agenda ahora aquí! ';
     } else {
-        resultElement.innerText = 'Hola, ' + inputNumber + ' lamentablemente no te conocemos, agenda una consulta para poder cuidarte mejor: \n AGENDA AQUÍ';
+        resultElement.innerText = 'Hola, ' + inputNumber + ' lamentablemente no te conocemos, agenda una consulta para poder cuidarte mejor: \n \n AGENDA AQUÍ';
     }
 }
