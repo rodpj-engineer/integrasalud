@@ -28,8 +28,7 @@ function calculate() {
             // Check if inputNumber exists in the table
             if (table[inputNumber]) {
                 var resultEntry = table[inputNumber];
-                resultInfoElement2.innerText = 'Hola ' + resultEntry.name + ' , te conozco! \n Eres' + resultEntry.sex + ' tienes ' + resultEntry.age + ' años, ';
-                resultInfoElement.innerText = 'Nos visitaste hace ' + resultEntry.days + ' días, el '+ resultEntry.lastVisit + '\n Te sugerimos realizarte un: ' + resultEntry.group + ', agenda con un precio especial ahora:';
+                resultInfoElement.innerText = 'Hola ' + resultEntry.name + ' , te conozco! \n Eres' + resultEntry.sex + ' tienes ' + resultEntry.age + ' años, \n Nos visitaste hace ' + resultEntry.days + ' días, el '+ resultEntry.lastVisit + '\n Te sugerimos realizarte un: ' + resultEntry.group + ', agenda con un precio especial ahora:';
                 resultElement.innerHTML = '<a href="https://www.integramedica.cl/integramedica/tu-salud-al-dia-2">AGENDA AHORA AQUÍ</a>:\n ';
 
                 //resultElement.innerText = 'Hola ' + table[inputNumber] + ', tenemos las siguientes sugerencias para ti: \n \n XXXX \n \n Agenda ahora aquí! \n https://www.integramedica.cl/integramedica/tu-salud-al-dia-2';
@@ -37,7 +36,7 @@ function calculate() {
             } else {
                 resultElement.innerText = 'Hola, ' + inputNumber + ' lamentablemente no te conocemos, agenda una consulta para poder cuidarte mejor: \n ';
                 resultElement.innerHTML = '<a href="https://www.integramedica.cl/integramedica/tu-salud-al-dia-2">AGENDA AQUÍ</a>:\n ';
-                resultInfoElement.innerText = '';
+                resultInfoElement.innerText = 'Hola, ' + inputNumber + ' lamentablemente no te conocemos, agenda una consulta para poder cuidarte mejor: \n ';
             }
         })
         .catch(error => console.error('Error fetching CSV file:', error));
@@ -45,8 +44,8 @@ function calculate() {
 
 function clearInput() {
     document.getElementById('numberInput').value = '';
-    document.getElementById('result').innerText = '';
+   // document.getElementById('result').innerText = '';
     document.getElementById('result').innerHTML = ''; 
     document.getElementById('resultInfo').innerText = '';
-    document.getElementById('resultInfo2').innerText = '';
+    //document.getElementById('resultInfo2').innerText = '';
 }
