@@ -34,7 +34,7 @@ function calculate() {
                 //resultElement.innerText = 'Hola ' + table[inputNumber] + ', tenemos las siguientes sugerencias para ti: \n \n XXXX \n \n Agenda ahora aquí! \n https://www.integramedica.cl/integramedica/tu-salud-al-dia-2';
                 
             } else {
-                resultElement.innerText = 'Hola, ' + inputNumber + ' lamentablemente no te conocemos, agenda una consulta para poder cuidarte mejor: \n \n AGENDA AQUÍ:\n https://www.integramedica.cl/integramedica/tu-salud-al-dia-2';
+                resultElement.innerText = 'Hola, ' + inputNumber + ' lamentablemente no te conocemos, agenda una consulta para poder cuidarte mejor: \n \n <a href="https://www.integramedica.cl/integramedica/tu-salud-al-dia-2">AGENDA AQUÍ</a>:\n ';
                 resultInfoElement.innerText = '';
             }
         })
