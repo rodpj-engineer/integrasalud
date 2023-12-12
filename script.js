@@ -15,6 +15,7 @@ function calculate() {
             rows.forEach(row => {
                 var columns = row.split(',');
                 var entry = {
+                    rut: columns[0],
                     name: columns[1],
                     age: columns[2],
                     sex: columns[3],
@@ -22,20 +23,21 @@ function calculate() {
                     group: columns[5],
                     days: columns[6]
                 };
-                table[columns[0]] = entry;
+
+                table[entry.rut] = entry;
             });
 
             // Check if inputNumber exists in the table
             if (table[inputNumber]) {
                 var resultEntry = table[inputNumber];
                 resultInfoElement.innerText = 'Hola ' + resultEntry.name + ' , te conozco! \n Eres' + resultEntry.sex + ' tienes ' + resultEntry.age + ' años, \n Nos visitaste hace ' + resultEntry.days + ' días, el '+ resultEntry.lastVisit + '\n Te sugerimos realizarte un: ' + resultEntry.group + ', agenda con un precio especial ahora:';
-                resultElement.innerHTML = '<a href="https://www.integramedica.cl/integramedica/tu-salud-al-dia-2">AGENDA AHORA AQUÍ</a>:\n ';
+                resultElement.innerHTML = '<a href="https://www.integramedica.cl/integramedica/tu-salud-al-dia-2">AGENDA AHORA AQUÍ</a>\n ';
 
                 //resultElement.innerText = 'Hola ' + table[inputNumber] + ', tenemos las siguientes sugerencias para ti: \n \n XXXX \n \n Agenda ahora aquí! \n https://www.integramedica.cl/integramedica/tu-salud-al-dia-2';
                 
             } else {
                 resultElement.innerText = 'Hola, ' + inputNumber + ' lamentablemente no te conocemos, agenda una consulta para poder cuidarte mejor: \n ';
-                resultElement.innerHTML = '<a href="https://www.integramedica.cl/integramedica/tu-salud-al-dia-2">AGENDA AQUÍ</a>:\n ';
+                resultElement.innerHTML = '<a href="https://www.integramedica.cl/integramedica/tu-salud-al-dia-2">AGENDA AQUÍ</a>\n ';
                 resultInfoElement.innerText = 'Hola, ' + inputNumber + ' lamentablemente no te conocemos, agenda una consulta para poder cuidarte mejor: \n ';
             }
         })
