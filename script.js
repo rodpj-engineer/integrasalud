@@ -30,11 +30,13 @@ function calculate() {
                 var resultEntry = table[inputNumber];
                 resultElement.innerText = 'Result: ' + resultEntry.name + ' (' + resultEntry.age + ' years old, ' + resultEntry.sex + ')';
                 resultInfoElement.innerText = 'Last Visit: ' + resultEntry.lastVisit + ', Group: ' + resultEntry.group + ', Days: ' + resultEntry.days;
+                resultElement.innerHTML = '<a href="https://www.integramedica.cl/integramedica/tu-salud-al-dia-2">AGENDA AHORA AQUÍ</a>:\n ';
 
                 //resultElement.innerText = 'Hola ' + table[inputNumber] + ', tenemos las siguientes sugerencias para ti: \n \n XXXX \n \n Agenda ahora aquí! \n https://www.integramedica.cl/integramedica/tu-salud-al-dia-2';
                 
             } else {
-                resultElement.innerText = 'Hola, ' + inputNumber + ' lamentablemente no te conocemos, agenda una consulta para poder cuidarte mejor: \n \n <a href="https://www.integramedica.cl/integramedica/tu-salud-al-dia-2">AGENDA AQUÍ</a>:\n ';
+                resultElement.innerText = 'Hola, ' + inputNumber + ' lamentablemente no te conocemos, agenda una consulta para poder cuidarte mejor: \n ';
+                resultElement.innerHTML = '<a href="https://www.integramedica.cl/integramedica/tu-salud-al-dia-2">AGENDA AQUÍ</a>:\n ';
                 resultInfoElement.innerText = '';
             }
         })
@@ -44,5 +46,6 @@ function calculate() {
 function clearInput() {
     document.getElementById('numberInput').value = '';
     document.getElementById('result').innerText = '';
+    document.getElementById('result').innerHTML = ''; 
     document.getElementById('resultInfo').innerText = '';
 }
