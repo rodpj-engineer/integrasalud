@@ -28,7 +28,7 @@ function calculate() {
             // Check if inputNumber exists in the table
             if (table[inputNumber]) {
                 var resultEntry = table[inputNumber];
-                resultElement.innerText = 'Hola ' + resultEntry.name + ' , te conozco! \n Eres' + resultEntry.sex + ' tienes ' + resultEntry.age + ' años, ';
+                resultInfoElement2.innerText = 'Hola ' + resultEntry.name + ' , te conozco! \n Eres' + resultEntry.sex + ' tienes ' + resultEntry.age + ' años, ';
                 resultInfoElement.innerText = 'Nos visitaste hace ' + resultEntry.days + ' días, el '+ resultEntry.lastVisit + '\n Te sugerimos realizarte un: ' + resultEntry.group + ', agenda con un precio especial ahora:';
                 resultElement.innerHTML = '<a href="https://www.integramedica.cl/integramedica/tu-salud-al-dia-2">AGENDA AHORA AQUÍ</a>:\n ';
 
@@ -48,4 +48,5 @@ function clearInput() {
     document.getElementById('result').innerText = '';
     document.getElementById('result').innerHTML = ''; 
     document.getElementById('resultInfo').innerText = '';
+    document.getElementById('resultInfo2').innerText = '';
 }
