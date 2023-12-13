@@ -1,6 +1,6 @@
 function calculate() {
-    var inputString = document.getElementById('inputString').value;
-    //var inputNumber = document.getElementById('numberInput').value;
+    //var inputString = document.getElementById('inputString').value;
+    var inputNumber = document.getElementById('numberInput').value;
     var resultElement = document.getElementById('result');
     var resultInfoElement = document.getElementById('resultInfo');
 
@@ -29,10 +29,10 @@ function calculate() {
             });
 
             // Check if inputNumber exists in the table
-            // if (table[inputNumber]) {
-            if (table[inputString]) {
-                // var resultEntry = table[inputNumber];
-                var resultEntry = table[inputString];
+            if (table[inputNumber]) {
+            //if (table[inputString]) {
+                var resultEntry = table[inputNumber];
+                // var resultEntry = table[inputString];
                 resultInfoElement.innerText = 'Hola ' + resultEntry.name + ' , te conozco! \n Eres ' + resultEntry.sex + ' tienes ' + resultEntry.age + ' años, \n Nos visitaste hace ' + resultEntry.days + ' días, el '+ resultEntry.lastVisit + '\n Te sugerimos realizarte ' + resultEntry.group + ', agenda con un precio especial ahora:';
                 resultElement.innerHTML = '<a href="https://www.integramedica.cl/integramedica/tu-salud-al-dia-2">AGENDA AHORA AQUÍ</a>\n ';
 
@@ -48,8 +48,8 @@ function calculate() {
 }
 
 function clearInput() {
-    document.getElementById('inputString').value = '';
-    // document.getElementById('numberInput').value = '';
+    //document.getElementById('inputString').value = '';
+    document.getElementById('numberInput').value = '';
    // document.getElementById('result').innerText = '';
     document.getElementById('result').innerHTML = ''; 
     document.getElementById('resultInfo').innerText = '';
